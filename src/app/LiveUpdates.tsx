@@ -18,10 +18,9 @@ export const Card1 = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna .{" "}
           </p>
-          <div className="flex space-x-4">
+          <div className="flex space-x-2  p-1 border-2 w-fit">
             <Link href="/liveupdate" className="text-md font-semibold">
-              {" "}
-              Read More{" "}
+              Read More
             </Link>
             <ArrowRight />
           </div>
@@ -33,10 +32,10 @@ export const Card1 = () => {
 
 const LiveUpdates = () => {
   return (
-    <>
-      <Container>
+    <div >
         <div id="liveupdates">
-          <div className="lg:py-20 bg-gray-100">
+          <div className="lg:py-20 bg-gray-100 w-full">
+      <Container>
             <div className="flex flex-col items-center text-center space-y-2">
               <h1 className="font-semibold text-4xl lg:mt-0 mt-20 ">
                 Live Updates
@@ -57,10 +56,10 @@ const LiveUpdates = () => {
                 <Card1 />
               </div>
             </div>
+      </Container>
           </div>
         </div>
-      </Container>
-    </>
+    </div>
   );
 };
 

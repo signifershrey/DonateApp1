@@ -37,8 +37,8 @@ export function MobileNav() {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <div className="flex py-4 items-baseline relative sm:hidden">
-        <figure className="mx-auto">
+      <div className="flex py-4  relative sm:hidden">
+        <figure className="">
           <Image
             src={logoImg}
             className="object-contain"
@@ -47,7 +47,7 @@ export function MobileNav() {
             quality={100}
           />
         </figure>
-        <div className="text-black absolute -right-14 xm:right-8 top-5">
+        <div className="text-black absolute -right-6 xm:right-8 top-5">
           <Image onClick={() => setOpen((o) => !o)} src={menuImg} alt="menu" />
         </div>
       </div>
@@ -119,7 +119,7 @@ export function DesktopNav() {
 
 function Navbar() {
   return (
-    <div className="max-w-8xl px-10">
+    <div className="max-w-8xl md:px-10 ">
       <Container>
         <MobileNav />
         <DesktopNav />

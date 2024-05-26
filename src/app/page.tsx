@@ -6,12 +6,12 @@ import CTASection from "./CTASection";
 
 export default function Home() {
   return (
-    <>
+    <div className="">
      <HeroSection />
      <OurGoalsSection />
      <OurProgress />
      <LiveUpdates />
      <CTASection />
-    </>
+    </div>
   );
 }

@@ -6,19 +6,15 @@ import email from "@/assets/svg/Footer - Contact Us - Email Icon.svg";
 import call from "@/assets/svg/Footer - Contact Us - Call Icon.svg";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Facebook,
-  Instagram,
-  Twitter,
-} from "lucide-react";
+import { Facebook, Instagram, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
     <>
-      <div id="contact" className="bg-white p-10 mt-10">
-        <Container>
-          <div className="lg:ml-40">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-y-20 md:gap-x-20 md:mb-4">
+      <Container>
+        <div id="contact" className="bg-white md:p-10 p-4 md:mt-10">
+          <div className="md:mx-32">
+            <div className="grid grid-cols-1 md:grid-cols-4 md:gap-y-20 gap-y-10 md:gap-x-20 md:mb-4">
               <div className="cols-span-3">
                 <Image src={logo} alt={"icon"} height={120} width={800} />
               </div>
@@ -68,9 +64,11 @@ const Footer = () => {
               </div>
 
               <div className="cols-span-1">
-                <p className="font-semibold text-xl md:pb-6 pb-2">Follow us on</p>
+                <p className="font-semibold text-xl md:pb-6 pb-2 ">
+                  Follow us on
+                </p>
                 <div className="flex flex-col gap-6">
-                  <div className="flex flex-row gap-6">
+                  <div className="flex flex-row md:gap-6 gap-12 py-2">
                     <a
                       href="https://twitter.com"
                       target="_blank"
@@ -104,8 +102,8 @@ const Footer = () => {
               </p>
             </div>
           </div>
-        </Container>
-      </div>
+        </div>
+      </Container>
     </>
   );
 };

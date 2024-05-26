@@ -42,8 +42,8 @@ const Campaignpage = () => {
           />
         </div>
 
-        <div id="main" className="w-full flex flex-col md:flex-row ">
-          <div id="left" className="md:w-1/2 p-4 bg-slate-200 md:px-16">
+        <div id="main" className="w-full flex flex-col-reverse md:flex-row ">
+          <div id="left" className="md:w-1/2 p-4  md:px-16">
             <h1 className="text-4xl font-bold py-2">
               Aid for Gaza&apos;s Underpaid but Dedicated Doctors.
             </h1>
@@ -101,11 +101,12 @@ const Campaignpage = () => {
                 </div>
               </div>
               <div className="my-4  mx-4 ">
-                <button className="bg-yellow-500 text-black flex justify-center md:px-48 py-2 font-semibold my-2 px-4 ">
                   <Link href="https://www.zeffy.com/en-US/donation-form/7f897d42-d3e5-4a81-890e-aa81fd32b40c">
-                    <span>Donate Now</span>
-                  </Link>
+                <button className="bg-yellow-500 text-black flex justify-center w-full py-2 font-semibold my-2 px-4 whitespace-nowrap">
+                    <span className="px-2">Donate Now</span>
+                    <ArrowRight/>
                 </button>
+                  </Link>
               </div>
             </div>
           </div>

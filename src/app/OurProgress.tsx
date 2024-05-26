@@ -23,10 +23,10 @@ const OurProgress = () => {
               </div>
             </div>
             <div className="max-w-6xl lg:px-[4rem]">
-              <div className="flex lg:flex-row md:flex-row flex-col items-center justify-between lg:p-0 p-4 mb-4 lg:mb-0">
+              <div className="flex lg:flex-row md:flex-row flex-col items-center justify-between lg:p-0 p-4 md:mb-4 lg:mb-0">
                 <div className="flex flex-col lg:space-y-[2rem]">
                   <div className="flex flex-col space-y-4 py-20">
-                    <h1 className="text-black text-3xl md:text-6xl font-semibold underline decoration-8 decoration-yellow-500">
+                    <h1 className="text-black text-4xl md:text-6xl font-semibold underline decoration-8 decoration-yellow-500">
                       20,156
                     </h1>
                     <p className="text-gray-700 text-md">

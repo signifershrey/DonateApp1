@@ -9,7 +9,7 @@ const HeroSection = () => {
     <>
     <Container>
     <div className="flex md:flex-row-reverse  md:py-20 py-4 px-4 md:px-0 md:pl-6 flex-col-reverse justify-center">
-      <div className=" p-2 md:p-0 w-full flex justify-center">
+      <div className=" md:p-0 w-full flex justify-center">
         <Image src={HeroImage} alt="hero" className="md:pl-20 w-full" />
       </div>
       <div className=" md:pl-20 md:py-32 md:pr-4">
