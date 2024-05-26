@@ -21,7 +21,7 @@ const Card1 = ({
   donationText,
 }: any) => {
   return (
-    <div className="bg-white md:p-10" id="goals">
+    <div className="bg-white md:p-10 p-2" id="goals">
       <Image
         src={imageSrc}
         alt="image"
@@ -35,7 +35,7 @@ const Card1 = ({
       <div className="flex items-center md:gap-10 gap-6">
         <div className="flex gap-1">
           <Link href={donationLink}>
-            <div className="bg-yellow-500 text-black flex gap-1 px-4 py-2 font-semibold items-center">
+            <div className="bg-yellow-500 text-black flex gap-1 px-4 py-2 font-semibold items-center whitespace-nowrap">
               <span>Read More</span>
               <span className="flex justify-center">
                 <ArrowRight />
@@ -85,7 +85,7 @@ const OurGoalsSection = () => {
   return (
     <>
       <div>
-        <div className=" bg-gray-100 md:pb-16 w-full">
+        <div className=" bg-gray-100 md:pb-16 w-full pb-4">
           <Container>
             <div className="">
               <div className="flex flex-col items-center text-center py-12">
@@ -94,7 +94,7 @@ const OurGoalsSection = () => {
                   Join us in making a difference through our donation campaigns.
                 </p>
               </div>
-              <div className="md:space-x-12 flex justify-around flex-col md:flex-row">
+              <div className="md:space-x-12 space-y-4 md:space-y-0 rounded-md flex justify-around flex-col md:flex-row">
                 <Card1
                   imageSrc={DoctorImage1}
                   title="Aid for Gaza's Underpaid but Dedicated Doctors."

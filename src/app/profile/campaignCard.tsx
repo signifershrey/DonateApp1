@@ -9,8 +9,7 @@ const CampaignCard = ({
   handleEdit,
 }: any) => {
 
-  console.log("SBSE UPAR" , _id);
-  console.log("SBSE UPAR" , amountCollected);
+ 
   
   const [isEditing, setIsEditing] = useState(false);
   const [editedAmountCollected, setEditedAmountCollected] =
@@ -77,10 +76,10 @@ const CampaignCard = ({
         </div>
       ) : (
         <div>
-          <div className="flex justify-between mb-2">
+          {/* <div className="flex justify-between mb-2">
             <span className="text-gray-700">Amount ID:</span>
             <span className="font-semibold">{_id}</span>
-          </div>
+          </div> */}
           <div className="flex justify-between mb-2">
             <span className="text-gray-700">Amount Collected:</span>
             <span className="font-semibold">{amountCollected}</span>

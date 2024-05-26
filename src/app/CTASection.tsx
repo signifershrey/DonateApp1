@@ -5,7 +5,7 @@ import React from "react";
 const CTASection = () => {
   return (
     <>
-      <div className="mx-auto max-w-7xl lg:p-0 py-8">
+      <div className="mx-auto max-w-7xl lg:p-0 md:py-8">
         <div className=" bg-yellow-500 p-8 relative md:-top-16">
           <div className=" flex justify-between lg:flex-row flex-col gap-4">
             <div className="font-semibold text-4xl  leading-normal text-start text-black lg:w-2/3">

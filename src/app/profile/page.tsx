@@ -6,6 +6,7 @@ import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import CampaignForm from "./campaignForm";
 import CampaignCard from "./campaignCard";
+import Cookies from "js-cookie";
 
 interface Campaign {
   _id: string;
@@ -20,7 +21,7 @@ export default function ProfilePage() {
   const [campaigns, setCampaigns] = useState<Campaign[]>([]);
   const [editedCampaign, setEditedCampaign] = useState<Campaign | null>(null);
 
-  const logout = async () => {
+  const handleLogout = async () => {
     try {
       await axios.get("/api/users/logout");
       toast.success("Logout successful");
@@ -45,6 +46,8 @@ export default function ProfilePage() {
   };
 
   useEffect(() => {
+    const token = Cookies.get('token');
+    console.log("TOKENN ", token);
     fetchPreviousDonations();
   }, []);
 
@@ -86,19 +89,24 @@ export default function ProfilePage() {
 
   return (
     <div className="">
-      <button onClick={logout} className="text-center">
-        Logout
-      </button>
+      <div className=" flex justify-center rounded-lg  md:justify-end md:mr-16 px-2 md:ml-20">
+        <button
+          onClick={handleLogout}
+          className="bg-red-500  text-white font-bold py-2 mb-2 px-6 shadow-md hover:bg-red-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75 transition duration-300 ease-in-out"
+        >
+          Logout
+        </button>
+      </div>
 
       <div className="">
-        <div className="flex flex-col md:flex-row ">
-          <div className="w-[50%] bg-gray-200 p-8">
+        <div className="flex flex-col-reverse md:flex-row ">
+          <div className="md:w-[50%] bg-gray-200 p-8">
             <h1 className="text-3xl font-semibold text-center mb-8 p-2">
               Add a New Campaign
             </h1>
             <CampaignForm addCampaign={addCampaign} />
           </div>
-          <div className="w-[50%] bg-gray-100 p-8">
+          <div className="md:w-[50%] bg-gray-100 p-8">
             <h1 className="text-3xl font-semibold text-center mb-8 p-2">
               Campaign Details
             </h1>

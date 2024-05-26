@@ -65,12 +65,12 @@ export function LoginButton() {
     <>
       <ul>
         <li>
-          <Link
+          {/* <Link
             href="/login"
             className="px-6 py-1 rounded-full text-sm transition-all ease-in-out hover:scale-110 hover:text-orange-600"
           >
             Login
-          </Link>
+          </Link> */}
           <Link
             href="https://www.zeffy.com/en-US/donation-form/7f897d42-d3e5-4a81-890e-aa81fd32b40c"
             className="bg-red-600 text-white px-6 py-3"

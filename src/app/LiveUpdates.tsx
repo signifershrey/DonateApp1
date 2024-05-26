@@ -9,7 +9,7 @@ export const Card1 = () => {
   return (
     <>
       <div>
-        <Image src={background} alt="hello" className="p-4" />
+        <Image src={background} alt="hello" className="md:p-4 " />
       </div>
       <div className="bg-white relative md:bottom-20 md:left-10 p-4">
         <div className="flex flex-col space-y-4 text-black px-2 ">
@@ -34,7 +34,7 @@ const LiveUpdates = () => {
   return (
     <div >
         <div id="liveupdates">
-          <div className="lg:py-20 bg-gray-100 w-full">
+          <div className="lg:py-20 bg-gray-100 w-full py-4">
       <Container>
             <div className="flex flex-col items-center text-center space-y-2">
               <h1 className="font-semibold text-4xl lg:mt-0 mt-20 ">
