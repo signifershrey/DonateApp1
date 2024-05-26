@@ -45,7 +45,7 @@ const Campaignpage = () => {
         <div id="main" className="w-full flex flex-col md:flex-row ">
           <div id="left" className="md:w-1/2 p-4 bg-slate-200 md:px-16">
             <h1 className="text-4xl font-bold py-2">
-              Aid for Gaza's Underpaid but Dedicated Doctors.
+              Aid for Gaza&apos;s Underpaid but Dedicated Doctors.
             </h1>
             <p className="py-4">
               Lorem ipsum dolor sit amet. Eos minus dicta ut delectus voluptas
