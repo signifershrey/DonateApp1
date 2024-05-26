@@ -8,9 +8,9 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const navlinks = [
-  { title: "Our Goals", destination: "#about" },
-  { title: "Our Progress", destination: "#services" },
-  { title: "Live Progress", destination: "#specialties" },
+  { title: "Our Goals", destination: "#goals" },
+  { title: "Our Progress", destination: "#progress" },
+  { title: "Live Progress", destination: "#liveupdates" },
 ];
 
 function MobileNavExtended() {
@@ -85,7 +85,7 @@ export function LoginButton() {
 
 export function DesktopNav() {
   const router = useRouter();
-  
+
   return (
     <div className="py-4 items-center justify-between relative hidden sm:flex">
       <figure>
@@ -111,9 +111,7 @@ export function DesktopNav() {
           </li>
         ))}
       </ul>
-      {
-        
-      }
+      {}
       <LoginButton />
     </div>
   );

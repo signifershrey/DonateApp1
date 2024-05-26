@@ -68,7 +68,7 @@ const Footer = () => {
               </div>
 
               <div className="cols-span-1">
-                <p className="font-semibold text-xl md:pb-6">Follow us on</p>
+                <p className="font-semibold text-xl md:pb-6 pb-2">Follow us on</p>
                 <div className="flex flex-col gap-6">
                   <div className="flex flex-row gap-6">
                     <a
