@@ -16,7 +16,13 @@ const Footer = () => {
           <div className="md:mx-32">
             <div className="grid grid-cols-1 md:grid-cols-4 md:gap-y-20 gap-y-10 md:gap-x-20 md:mb-4">
               <div className="cols-span-3">
-                <Image src={logo} alt={"icon"} height={120} width={800} />
+                <Image
+                  src={logo}
+                  alt={"icon"}
+                  height={64}
+                  quality={100}
+                  className="object-contain"
+                />
               </div>
               <div className="cols-span-1">
                 <div className="flex flex-col gap-6">

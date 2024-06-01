@@ -44,7 +44,7 @@ export function MobileNav() {
             className="object-contain"
             alt="logo"
             height={40}
-            quality={100}
+            quality={200}
           />
         </figure>
         <div className="text-black absolute -right-6 xm:right-8 top-5">
@@ -94,7 +94,7 @@ export function DesktopNav() {
             src={logoImg}
             className="object-contain p-1"
             alt="logo"
-            height={34}
+            height={50}
             quality={100}
           />
         </Link>
