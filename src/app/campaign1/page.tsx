@@ -8,13 +8,16 @@ import { ArrowRight } from "lucide-react";
 import axios from "axios";
 import Container from "../container";
 
-interface Campaign{
-  amountCollected : number,
-  amountSpent : number,
+interface Campaign {
+  amountCollected: number;
+  amountSpent: number;
 }
 
 const Campaignpage = () => {
-  const [donation1, setDonation1] = useState<Campaign>({amountCollected: 0 , amountSpent: 0});
+  const [donation1, setDonation1] = useState<Campaign>({
+    amountCollected: 0,
+    amountSpent: 0,
+  });
   const fetchdonations = async () => {
     try {
       const response = await axios.get("/api/campaign");
@@ -48,25 +51,31 @@ const Campaignpage = () => {
               Aid for Gaza&apos;s Underpaid but Dedicated Doctors.
             </h1>
             <p className="py-4">
-              Lorem ipsum dolor sit amet. Eos minus dicta ut delectus voluptas
-              rem dolorem animi et veritatis quis. Vel veniam voluptas non
-              tempora eaque qui voluptate rerum? In explicabo blanditiis ut
-              laudantium aliquam qui voluptates quae. Ut ullam vero est
-              veritatis obcaecati est corporis sapiente et officia deserunt.
+              Help us support families in Gaza Since December 2023, we have been
+              committed to support 10 families with the help of 2 doctors as
+              well as several local community volunteers. If we get more
+              donations we can increase the number of families that we are
+              committing to support.
             </p>
             <p className="py-4">
-              Lorem ipsum dolor sit amet. Eos minus dicta ut delectus voluptas
-              rem dolorem animi et veritatis quis. Vel veniam voluptas non
-              tempora eaque qui voluptate rerum? In explicabo blanditiis ut
-              laudantium aliquam qui voluptates quae. Ut ullam vero est
-              veritatis obcaecati est corporis sapiente et officia deserunt.
+              Each $1,000 will be for 1 family, so we&apos;re raising $10,000 for the
+              10 families. 20% of the donations will be given to the doctors,
+              volunteers, and helpers and 80% of the donations will be spent and
+              given to the families. We&apos;ve been able to purchase tents, food,
+              blankets, and of course medicine for those that needed it.
             </p>
             <p className="py-4">
-              Lorem ipsum dolor sit amet. Eos minus dicta ut delectus voluptas
-              rem dolorem animi et veritatis quis. Vel veniam voluptas non
-              tempora eaque qui voluptate rerum? In explicabo blanditiis ut
-              laudantium aliquam qui voluptates quae. Ut ullam vero est
-              veritatis obcaecati est corporis sapiente et officia deserunt.
+              We raised those funds in the past few months without any clear
+              plan or method of giving those funds to the locals in Gaza, but
+              with determination and a lot of blessings- we now have a process
+              of getting the donation funds transferred to the doctors directly
+              and the donations being distributed by local volunteers to the
+              families we&apos;ve chosen to support.
+            </p>
+            <p className="py-4">
+              With your help, Doctors Within Borders can reach our goal and
+              continue the work we’ve set out to do in this campaign. Please
+              help if you can. Every donation makes a difference.
             </p>
           </div>
 
@@ -101,12 +110,15 @@ const Campaignpage = () => {
                 </div>
               </div>
               <div className="my-4  mx-4 ">
-                  <Link href="https://www.zeffy.com/en-US/donation-form/7f897d42-d3e5-4a81-890e-aa81fd32b40c">
-                <button className="bg-yellow-500 text-black flex justify-center w-full py-2 font-semibold my-2 px-4 whitespace-nowrap">
+                <Link
+                  href="https://www.paypal.com/donate?campaign_id=EP5T3GJRHCAZ4"
+                  target="_blank"
+                >
+                  <button className="bg-yellow-500 text-black flex justify-center w-full py-2 font-semibold my-2 px-4 whitespace-nowrap">
                     <span className="px-2">Donate Now</span>
-                    <ArrowRight/>
-                </button>
-                  </Link>
+                    <ArrowRight />
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
