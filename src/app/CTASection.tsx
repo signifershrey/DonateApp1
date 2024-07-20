@@ -14,11 +14,12 @@ const CTASection = () => {
             </div>
             <div className="lg:py-8">
               <button className="bg-white text-black flex gap-4 px-8 py-3 font-semibold text-xl">
-                <Link href="https://www.zeffy.com/en-US/donation-form/7f897d42-d3e5-4a81-890e-aa81fd32b40c">
+                <Link href="https://www.paypal.com/donate?campaign_id=EP5T3GJRHCAZ4" target="_blank">
                   <span>
                     Donate now
                   </span>
                 </Link>
+                
               </button>
             </div>
           </div>

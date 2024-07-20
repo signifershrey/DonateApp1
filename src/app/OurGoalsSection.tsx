@@ -102,13 +102,6 @@ const OurGoalsSection = () => {
                   donationAmount={donation1.amountCollected}
                   donationText="Donation received Till Date"
                 />
-                <Card1
-                  imageSrc={DoctorImage2}
-                  title="Support for Gaza's Dedicated Childcare Workers."
-                  donationLink="/campaign2"
-                  donationAmount={donation2.amountCollected}
-                  donationText="Donation received Till Date"
-                />
               </div>
             </div>
           </Container>

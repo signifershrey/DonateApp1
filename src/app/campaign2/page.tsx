@@ -103,7 +103,10 @@ const Campaignpage = () => {
                 </div>
               </div>
               <div className="my-4  mx-4 ">
-                <Link href="https://www.zeffy.com/en-US/donation-form/7f897d42-d3e5-4a81-890e-aa81fd32b40c">
+                <Link
+                  href="https://www.paypal.com/donate?campaign_id=EP5T3GJRHCAZ4"
+                  target="_blank"
+                >
                   <button className="bg-yellow-500 text-black flex justify-center w-full py-2 font-semibold my-2 px-4 whitespace-nowrap">
                     <span className="px-2">Donate Now</span>
                     <ArrowRight />
