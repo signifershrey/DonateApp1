@@ -21,36 +21,49 @@ const Card1 = ({
   donationText,
 }: any) => {
   return (
-    <div className="bg-white md:p-10 p-2" id="goals">
-      <Image
-        src={imageSrc}
-        alt="image"
-        className="md:max-w-[35rem] md:max-h-[35rem]"
-      />
+    <div className="bg-white md:p-10 p-2  flex" id="goals">
+      <div className="w-1/2">
+        <Image
+          src={imageSrc}
+          alt="image"
+          className="md:max-w-[35rem] md:max-h-[35rem]"
+        />
+      </div>
 
-      <h1 className="text-black md:text-4xl text-2xl pt-8 md:pb-6 font-bold">
-        {title}
-      </h1>
+      <div className="w-1/2">
+        <h1 className="text-black md:text-4xl text-2xl  md:pb-6 font-bold">
+          {title}
+        </h1>
+        <p>
+          In Gaza, doctors tirelessly work under harrowing conditions, often
+          with limited resources and insufficient pay. These dedicated
+          professionals provide critical medical care amidst ongoing conflict
+          and humanitarian crises. Your donation can help ensure they receive
+          the support and resources they need to continue their vital work,
+          bringing hope and healing to countless lives. Support Gaza's underpaid
+          but unwaveringly committed doctors today.
+        </p>
 
-      <div className="flex items-center md:gap-10 gap-6">
-        <div className="flex gap-1">
-          <Link href={donationLink}>
-            <div className="bg-yellow-500 text-black flex gap-1 px-4 py-2 font-semibold items-center whitespace-nowrap">
-              <span>Read More</span>
-              <span className="flex justify-center">
-                <ArrowRight />
-              </span>
-            </div>
-          </Link>
-        </div>
-        <p className="text-6xl w-2 text-gray-300"> | </p>
-        <div className="flex flex-col pt-4 items-start text-start">
-          <p className="text-[#0B8D00] text-3xl font-semibold">
-            $ {donationAmount}
-          </p>
-          <p className="text-gray-700 md:leading-7 md:text-md text-sm py-2">
-            {donationText}
-          </p>
+        <div className="flex items-center md:gap-10 gap-6">
+          <div className="flex gap-1">
+            <Link href={donationLink}>
+              <div className="bg-yellow-500 text-black flex gap-1 px-4 py-2 font-semibold items-center whitespace-nowrap">
+                <span>Read More</span>
+                <span className="flex justify-center">
+                  <ArrowRight />
+                </span>
+              </div>
+            </Link>
+          </div>
+          <p className="text-6xl w-2 text-gray-300"> | </p>
+          <div className="flex flex-col pt-4 items-start text-start">
+            <p className="text-[#0B8D00] text-3xl font-semibold">
+              $ {donationAmount}
+            </p>
+            <p className="text-gray-700 md:leading-7 md:text-md text-sm py-2">
+              {donationText}
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -88,13 +101,13 @@ const OurGoalsSection = () => {
         <div className=" bg-gray-100 md:pb-16 w-full pb-4">
           <Container>
             <div className="">
-              <div className="flex flex-col items-center text-center py-12">
+              <div className="flex flex-col items-center text-center py-10">
                 <h1 className="font-semibold text-4xl py-4">Our Goals</h1>
                 <p className="p-2">
                   Join us in making a difference through our donation campaigns.
                 </p>
               </div>
-              <div className="md:space-x-12 space-y-4 md:space-y-0 rounded-md flex justify-around flex-col md:flex-row">
+              <div className="md:space-x-10 space-y-4 md:space-y-0 rounded-md flex justify-around flex-col md:flex-row bg-red-200">
                 <Card1
                   imageSrc={DoctorImage1}
                   title="Aid for Gaza's Underpaid but Dedicated Doctors."

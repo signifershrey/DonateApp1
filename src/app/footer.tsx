@@ -74,7 +74,7 @@ const Footer = () => {
                   Follow us on
                 </p>
                 <div className="flex flex-col gap-6">
-                  <div className="flex flex-row md:gap-6 gap-12 py-2">
+                  <div className="flex flex-row md:gap-6 gap-12 py-2 ">
                     <a
                       href="https://twitter.com"
                       target="_blank"
@@ -104,7 +104,7 @@ const Footer = () => {
 
             <div className="text-black text-center">
               <p className="text-md">
-                Copyright © 2023 | Doctors Within Borders.
+                Copyright 2023 © docswithinborders. All Rights Reserved.
               </p>
             </div>
           </div>
