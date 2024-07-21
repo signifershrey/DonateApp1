@@ -20,36 +20,30 @@ const HowWeDo = () => {
                 We provide critical aid through the donations we receive.
               </p>
             </div>
-            <div className="flex py-12">
+            <div className="flex py-12 flex-col md:flex-row">
               <div className="md:1/3 space-y-4 text-center">
                 <div className="flex justify-center">
                   <Image src={Medicine} alt="medicines" />
                 </div>
                 <h1 className="text-2xl font-semibold">Supplies</h1>
-                <p className=" px-4">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Eius, nobis.
-                </p>
+                <p className=" px-4">Supporting Gaza&apos;s dedicated doctors with essential resources and financial aid.</p>
               </div>
               <div className="md:1/3 space-y-4 text-center">
-              <div className="flex justify-center">
-
-                <Image src={Food} alt="Foods" />
-              </div>
+                <div className="flex justify-center">
+                  <Image src={Food} alt="Foods" />
+                </div>
                 <h1 className="text-2xl font-semibold">Food</h1>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Eius, nobis.
+                  Providing vital assistance to needy families during challenging times.
                 </p>
               </div>
               <div className="md:1/3 space-y-4 text-center">
-              <div className="flex justify-center">
-                <Image src={Tent} alt="Tent" />
-              </div>
+                <div className="flex justify-center">
+                  <Image src={Tent} alt="Tent" />
+                </div>
                 <h1 className="text-2xl font-semibold">Tents</h1>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Eius, nobis.
+                  Offering hope and aid to children affected by the conflict.
                 </p>
               </div>
             </div>

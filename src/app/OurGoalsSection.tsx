@@ -40,7 +40,7 @@ const Card1 = ({
           professionals provide critical medical care amidst ongoing conflict
           and humanitarian crises. Your donation can help ensure they receive
           the support and resources they need to continue their vital work,
-          bringing hope and healing to countless lives. Support Gaza's underpaid
+          bringing hope and healing to countless lives. Support Gaza&apos;s underpaid
           but unwaveringly committed doctors today.
         </p>
 
@@ -110,7 +110,7 @@ const OurGoalsSection = () => {
               <div className="md:space-x-10 space-y-4 md:space-y-0 rounded-md flex justify-around flex-col md:flex-row bg-red-200">
                 <Card1
                   imageSrc={DoctorImage1}
-                  title="Aid for Gaza's Underpaid but Dedicated Doctors."
+                  title="Aid for Gaza&apos;s Underpaid but Dedicated Doctors."
                   donationLink="/campaign1"
                   donationAmount={donation1.amountCollected}
                   donationText="Donation received Till Date"

@@ -11,8 +11,8 @@ const WhatWeDo = () => {
   return (
     <>
       <Container>
-        <div className="flex py-16 ">
-          <div className="w-1/2">
+        <div className="flex md:py-16 flex-col md:flex-row py-8 ">
+          <div className="md:w-1/2">
             <h1 className="text-4xl font-semibold pb-8">What We Do?</h1>
             <p className="pr-6 pb-6">
               At our organization, we are committed to supporting the courageous
@@ -42,7 +42,7 @@ const WhatWeDo = () => {
                 <Image src={FamilyIcon} alt="DoctorIcon " />
               </div>
               <div>
-                <h1 className="font-semibold pb-2">Family</h1>
+                <h1 className="font-semibold pb-2">Families</h1>
                 <p className="pb-2">
                   Providing vital assistance to needy families during
                   challenging times.
@@ -61,7 +61,7 @@ const WhatWeDo = () => {
               </div>
             </div>
           </div>
-          <div className="w-1/2 ">
+          <div className="md:w-1/2 ">
             <Image src={Task} alt="Task" className="w-full h-full py-6" />
           </div>
         </div>

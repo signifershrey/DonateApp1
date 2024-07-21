@@ -17,7 +17,7 @@ const HeroSection = () => {
               Supporting <span className="text-[#FFBB00] px-1">Children </span>
               and Doctors in Gaza
             </p>
-            <p>
+            <p className="py-2">
               Join us in making a difference through our donation campaigns.
             </p>
             <button>
