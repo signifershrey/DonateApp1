@@ -73,7 +73,7 @@ const Campaignpage = () => {
               families we&apos;ve chosen to support.
             </p>
             <p className="py-4">
-              With your help, Doctors Within Borders can reach our goal and
+              With your help, DoctorsWithHope can reach our goal and
               continue the work we’ve set out to do in this campaign. Please
               help if you can. Every donation makes a difference.
             </p>

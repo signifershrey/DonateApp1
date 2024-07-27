@@ -6,7 +6,7 @@ import email from "@/assets/svg/Footer - Contact Us - Email Icon.svg";
 import call from "@/assets/svg/Footer - Contact Us - Call Icon.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { FaTiktok, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -43,27 +43,10 @@ const Footer = () => {
               <div className="cols-span-1">
                 <div className="flex flex-col gap-6">
                   <h1 className="text-xl font-semibold text-black">Contact</h1>
-                  <div className="flex flex-row space-x-5">
-                    <Image
-                      src={location}
-                      alt={location}
-                      height={24}
-                      width={24}
-                    />
-                    <Link href="" className="text-black text-md">
-                      1847 Jennifer Lane Raleigh North Carolina
-                    </Link>
-                  </div>
-                  <div className="flex flex-row space-x-5">
-                    <Image src={call} alt={call} height={24} width={24} />
-                    <Link href="" className="text-black text-md ">
-                      +1111111111
-                    </Link>
-                  </div>
-                  <div className="flex flex-row space-x-5">
+                  <div className="flex flex-row space-x-2">
                     <Image src={email} alt={email} height={24} width={24} />
                     <Link href="" className="text-black lg:text-md text-sm">
-                      info@docswithinborders.com
+                      doctorswithhope@gmail.com
                     </Link>
                   </div>
                 </div>
@@ -76,25 +59,18 @@ const Footer = () => {
                 <div className="flex flex-col gap-6">
                   <div className="flex flex-row md:gap-6 gap-12 py-2 ">
                     <a
-                      href="https://twitter.com"
+                      href="https://www.tiktok.com/@doctorswithhope"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Twitter className="yellow-500" />
+                      <FaTiktok size={25} />
                     </a>
                     <a
-                      href="https://www.linkedin.com"
+                      href="https://www.instagram.com/doctorswithhope/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Facebook />
-                    </a>
-                    <a
-                      href="https://www.instagram.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Instagram />
+                      <FaInstagram size={25} />
                     </a>
                   </div>
                 </div>
@@ -104,7 +80,7 @@ const Footer = () => {
 
             <div className="text-black text-center">
               <p className="text-md">
-                Copyright 2023 © docswithinborders. All Rights Reserved.
+                Copyright 2023 © doctorswithhope. All Rights Reserved.
               </p>
             </div>
           </div>
