@@ -10,9 +10,9 @@ import { FaTiktok, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <>
+    <div className="">
       <Container>
-        <div id="contact" className="bg-white md:p-10 p-4 md:mt-10">
+        <div id="contact" className=" md:p-10 p-4 md:mt-10">
           <div className="md:mx-32">
             <div className="grid grid-cols-1 md:grid-cols-4 md:gap-y-20 gap-y-10 md:gap-x-20 md:mb-4">
               <div className="cols-span-3">
@@ -86,7 +86,7 @@ const Footer = () => {
           </div>
         </div>
       </Container>
-    </>
+    </div>
   );
 };
 

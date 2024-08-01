@@ -7,12 +7,12 @@ import Container from "./container";
 
 export const Card1 = () => {
   return (
-    <>
+    <div className="">
       <div>
-        <Image src={background} alt="hello" className="md:p-4 " />
+        <Image src={background} alt="hello" className="md:p-2" />
       </div>
-      <div className="bg-white relative md:bottom-20 md:left-10 p-4">
-        <div className="flex flex-col space-y-4 text-black px-2 ">
+      <div className="bg-white relative md:bottom-20 md:left-10 p-2 border-2">
+        <div className="flex flex-col space-y-4 text-black  ">
           <h1 className="text-start font-semibold text-3xl ">WSCNF</h1>
           <p className="text-gray-700">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -26,19 +26,19 @@ export const Card1 = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
 const LiveUpdates = () => {
   return (
-    <div >
-        <div id="liveupdates">
-          <div className="lg:py-20 bg-gray-100 w-full py-4">
-      <Container>
+    <div className="">
+      <div id="liveupdates">
+        <div className="lg:py-20  w-full py-4">
+          <Container>
             <div className="flex flex-col items-center text-center space-y-2">
               <h1 className="font-semibold text-4xl lg:mt-0 mt-20 ">
-                Live Updates
+                Our Social Media Feeds
               </h1>
               <p className="p-2">
                 Stay informed with real-time updates on our ongoing campaigns
@@ -56,9 +56,9 @@ const LiveUpdates = () => {
                 <Card1 />
               </div>
             </div>
-      </Container>
-          </div>
+          </Container>
         </div>
+      </div>
     </div>
   );
 };

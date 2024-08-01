@@ -43,8 +43,8 @@ export function MobileNav() {
             src={logoImg}
             className="object-contain"
             alt="logo"
-            height={40}
-            quality={200}
+            height={50}
+            quality={100}
           />
         </figure>
         <div className="text-black absolute -right-6 xm:right-8 top-5">

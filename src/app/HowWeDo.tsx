@@ -12,7 +12,7 @@ const HowWeDo = () => {
   return (
     <>
       <div>
-        <div className=" bg-gray-100 md:py-16 w-full pb-4">
+        <div className="  md:py-16 w-full pb-4">
           <Container>
             <div className="text-center">
               <h1 className="font-semibold text-4xl p-2">How we do it</h1>

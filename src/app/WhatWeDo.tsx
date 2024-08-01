@@ -5,11 +5,11 @@ import ChildIcon from "@/assets/childIcon.png";
 import DoctorIcon from "@/assets/DoctorIcon.png";
 import FamilyIcon from "@/assets/FamilyIcon.png";
 import Image from "next/image";
-
+import { ArrowRight } from "lucide-react";
 
 const WhatWeDo = () => {
   return (
-    <>
+    <div className="bg-gray-100">
       <Container>
         <div className="flex md:py-16 flex-col md:flex-row py-8 ">
           <div className="md:w-1/2">
@@ -60,13 +60,23 @@ const WhatWeDo = () => {
                 </p>
               </div>
             </div>
+            <button>
+              <a
+                className="flex my-2  bg-yellow-500 px-6 py-2 text-black font-semibold"
+                href="https://www.paypal.com/donate?campaign_id=EP5T3GJRHCAZ4"
+                target="_blank"
+              >
+                Support Them Now
+                <ArrowRight />
+              </a>
+            </button>
           </div>
           <div className="md:w-1/2 ">
             <Image src={Task} alt="Task" className="w-full h-full py-6" />
           </div>
         </div>
       </Container>
-    </>
+    </div>
   );
 };
 

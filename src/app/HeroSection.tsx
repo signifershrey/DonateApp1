@@ -3,6 +3,7 @@ import HeroImage from "@/assets/HeroImage2.png";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Container from "./container";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -20,7 +21,17 @@ const HeroSection = () => {
             <p className="py-2">
               Join us in making a difference through our donation campaigns.
             </p>
-            <button>
+            <div className="pb-2">
+              <Link href='/campaign1'>
+                <div className="bg-yellow-500 text-black flex  px-4 py-2 font-semibold items-center md:w-1/4 w-1/2">
+                  <span>Read More</span>
+                  <span className="flex justify-center">
+                    <ArrowRight />
+                  </span>
+                </div>
+              </Link>
+            </div>
+            {/* <button>
               <a
                 href="#goals"
                 className="flex my-2 bg-yellow-500 px-6 py-2 text-black font-semibold"
@@ -28,7 +39,7 @@ const HeroSection = () => {
                 Support Them Now
                 <ArrowRight />
               </a>
-            </button>
+            </button> */}
           </div>
         </div>
       </Container>
