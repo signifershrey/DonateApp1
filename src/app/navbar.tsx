@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import logoImg from "@/assets/logo.png";
 import Image from "next/image";
 import menuImg from "@/assets/svg/menu (1).svg";
@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation";
 const navlinks = [
   { title: "Our Goals", destination: "#goals" },
   { title: "Our Progress", destination: "#progress" },
-  { title: "Live Progress", destination: "#liveupdates" },
+  { title: "Social Media Feeds", destination: "#liveupdates" },
 ];
 
 function MobileNavExtended() {
@@ -35,10 +35,30 @@ function MobileNavExtended() {
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (navRef.current && !navRef.current.contains(event.target as Node)) {
+      setOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (open) {
+      document.addEventListener("click", handleClickOutside);
+    } else {
+      document.removeEventListener("click", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [open]);
+
   return (
     <>
-      <div className="flex py-4  relative sm:hidden">
-        <figure className="">
+      <div className="flex py-4 relative sm:hidden">
+        <figure>
           <Image
             src={logoImg}
             className="object-contain"
@@ -52,7 +72,7 @@ export function MobileNav() {
         </div>
       </div>
       {open && (
-        <div className="absolute w-full left-0 z-50">
+        <div ref={navRef} className="absolute w-full left-0 z-50">
           <MobileNavExtended />
         </div>
       )}
@@ -65,12 +85,6 @@ export function LoginButton() {
     <>
       <ul>
         <li>
-          {/* <Link
-            href="/login"
-            className="px-6 py-1 rounded-full text-sm transition-all ease-in-out hover:scale-110 hover:text-orange-600"
-          >
-            Login
-          </Link> */}
           <Link
             href="https://www.paypal.com/donate?campaign_id=EP5T3GJRHCAZ4"
             className="bg-red-600 text-white px-6 py-3"
@@ -112,7 +126,6 @@ export function DesktopNav() {
           </li>
         ))}
       </ul>
-      {}
       <LoginButton />
     </div>
   );
