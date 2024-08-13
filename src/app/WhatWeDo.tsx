@@ -72,7 +72,7 @@ const WhatWeDo = () => {
             </button>
           </div>
           <div className="md:w-1/2 ">
-            <Image src={Task} alt="Task" className="w-full h-full py-6" />
+            <Image src={Task} alt="Task" className="w-full h-full my-6 rounded-lg" />
           </div>
         </div>
       </Container>

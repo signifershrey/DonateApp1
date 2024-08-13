@@ -1,9 +1,7 @@
 import React from "react";
 import Container from "./container";
 import logo from "@/assets/logo.png";
-import location from "@/assets/svg/Footer - Contact Us - Location Icon.svg";
 import email from "@/assets/svg/Footer - Contact Us - Email Icon.svg";
-import call from "@/assets/svg/Footer - Contact Us - Call Icon.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { FaTiktok, FaInstagram } from "react-icons/fa";
@@ -35,9 +33,9 @@ const Footer = () => {
                   <Link href="#services" className="text-black text-md">
                     Our Progress
                   </Link>
-                  <Link href="#specialties" className="text-black text-md">
+                  {/* <Link href="#specialties" className="text-black text-md">
                     Live Updates
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
               <div className="cols-span-1">

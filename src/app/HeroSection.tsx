@@ -10,8 +10,8 @@ const HeroSection = () => {
     <>
       <Container>
         <div className="flex md:flex-row-reverse  md:py-20 py-4 px-4 md:px-0 md:pl-6 flex-col-reverse justify-center">
-          <div className=" md:p-0 w-full flex justify-center ">
-            <Image src={HeroImage} alt="hero" className="md:pl-20 w-full" />
+          <div className=" md:p-0 w-full flex justify-center md:h-[70vh] h-[50vh] ">
+            <Image src={HeroImage} alt="hero" className="md:ml-20 w-full rounded-lg" />
           </div>
           <div className=" md:pl-20 md:py-32 md:pr-4">
             <p className="space-y-4 leading-tight font-bold text-2xl md:text-4xl lg:text-6xl">
@@ -22,7 +22,7 @@ const HeroSection = () => {
               Join us in making a difference through our donation campaigns.
             </p>
             <div className="pb-2">
-              <Link href='/campaign1'>
+              <Link href="/campaign1">
                 <div className="bg-yellow-500 text-black flex  px-4 py-2 font-semibold items-center md:w-1/4 w-1/2">
                   <span>Read More</span>
                   <span className="flex justify-center">
