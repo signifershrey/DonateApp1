@@ -40,11 +40,10 @@ const LiveUpdates: React.FC = () => {
       <Container>
         <div className="flex flex-col items-center text-center space-y-2">
           <h1 className="font-semibold text-4xl lg:mt-0 mt-20">
-            Our Social Media Feeds
+            Our Stories
           </h1>
           <p className="p-2">
-            Stay informed with real-time updates on our ongoing campaigns and
-            impact.
+            Hear the stories from the families directly that we've been able to support.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-14 md:p-12 lg:mt-0 mt-10">

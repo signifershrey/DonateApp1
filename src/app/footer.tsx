@@ -30,9 +30,9 @@ const Footer = () => {
                   <Link href="#about" className="text-black text-md">
                     Our Goals
                   </Link>
-                  <Link href="#services" className="text-black text-md">
+                  {/* <Link href="#services" className="text-black text-md">
                     Our Progress
-                  </Link>
+                  </Link> */}
                   {/* <Link href="#specialties" className="text-black text-md">
                     Live Updates
                   </Link> */}

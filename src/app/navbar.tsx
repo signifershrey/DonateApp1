@@ -9,8 +9,8 @@ import { useRouter } from "next/navigation";
 
 const navlinks = [
   { title: "Our Goals", destination: "#goals" },
-  { title: "Our Progress", destination: "#progress" },
-  { title: "Social Media Feeds", destination: "#liveupdates" },
+  // { title: "Our Progress", destination: "#progress" },
+  { title: "Our Stories", destination: "#liveupdates" },
 ];
 
 function MobileNavExtended() {

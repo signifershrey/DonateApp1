@@ -15,11 +15,11 @@ const HeroSection = () => {
           </div>
           <div className=" md:pl-20 md:py-32 md:pr-4">
             <p className="space-y-4 leading-tight font-bold text-2xl md:text-4xl lg:text-6xl">
-              Supporting <span className="text-[#FFBB00] px-1">Children </span>
-              and Doctors in Gaza
+              Supporting Families and<span className="text-[#FFBB00] px-1">Children </span>
+              with Doctors With Hope
             </p>
             <p className="py-2">
-              Join us in making a difference through our donation campaigns.
+              Join us in making a difference by donating to support families in Gaza.
             </p>
             <div className="pb-2">
               <Link href="/campaign1">

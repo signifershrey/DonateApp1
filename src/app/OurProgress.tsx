@@ -10,7 +10,7 @@ const OurProgress = () => {
           <div className="" id="progress">
             <div className="max-w-8xl lg:px-20 lg:py-6 md:p-4 p-2 mx-auto">
               <div className="flex lg:flex-row items-center  flex-col lg:justify-between  mt-10 space-y-6">
-                <h1 className="text-5xl font-semibold text-center">
+                <h1 className="text-5xl font-bold text-center text-yellow-500">
                   Our Progress
                 </h1>
                 <p className="lg:w-2/4 justify-end text-gray-700 lg:text-left text-center lg:m-0 m-4">
@@ -26,19 +26,19 @@ const OurProgress = () => {
               <div className="flex lg:flex-row md:flex-row flex-col items-center justify-between lg:p-0 p-2 md:mb-4 lg:mb-0">
                 <div className="flex flex-col lg:space-y-[1rem]">
                   <div className="flex flex-col space-y-4 py-16">
-                    <h1 className="text-black text-4xl md:text-6xl font-semibold underline decoration-8 decoration-yellow-500">
-                      20,156
+                    <h1 className="text-black text-4xl md:text-6xl font-semibold   ">
+                      $33,435
                     </h1>
-                    <p className="text-gray-700 text-md">
-                      Doctors We Have Helped
+                    <p className="text-yellow-500 text-md font-bold">
+                      Total Donations Recieved
                     </p>
                   </div>
                   <div className="flex flex-col space-y-4">
-                    <h1 className="text-black text-3xl md:text-6xl font-semibold underline decoration-8 decoration-yellow-500">
-                      20,156
+                    <h1 className="text-black text-3xl md:text-6xl font-semibold   ">
+                      $12,435
                     </h1>
-                    <p className="text-gray-700 text-md">
-                      Doctors We Have Helped
+                    <p className="text-yellow-500 text-md font-bold">
+                      Venmo Donations
                     </p>
                   </div>
                   <div></div>
@@ -52,19 +52,19 @@ const OurProgress = () => {
 
                 <div className="flex flex-col lg:space-y-[2rem]">
                   <div className="flex flex-col space-y-4 py-20">
-                    <h1 className="text-black text-3xl md:text-6xl font-semibold underline decoration-8 decoration-yellow-500">
-                      20,156
+                    <h1 className="text-black text-3xl md:text-6xl font-semibold   ">
+                      $13,709
                     </h1>
-                    <p className="text-gray-700 text-md">
-                      Doctors We Have Helped
+                    <p className="text-yellow-500 text-md font-bold">
+                      Paypal Donations
                     </p>
                   </div>
                   <div className="flex flex-col space-y-4">
-                    <h1 className="text-black text-3xl md:text-6xl font-semibold underline decoration-8 decoration-yellow-500">
-                      20,156
+                    <h1 className="text-black text-3xl md:text-6xl font-semibold   ">
+                      $7762
                     </h1>
-                    <p className="text-gray-700 text-md">
-                      Doctors We Have Helped
+                    <p className="text-yellow-500 text-md font-bold ">
+                      Zelle Donations
                     </p>
                   </div>
                 </div>
