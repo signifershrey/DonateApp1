@@ -43,7 +43,7 @@ const LiveUpdates: React.FC = () => {
             Our Stories
           </h1>
           <p className="p-2">
-            Hear the stories from the families directly that we've been able to support.
+            Hear the stories from the families directly that we have been able to support.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-14 md:p-12 lg:mt-0 mt-10">
