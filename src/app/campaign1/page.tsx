@@ -111,7 +111,7 @@ const Campaignpage = () => {
               </div>
               <div className="my-4  mx-4 ">
                 <Link
-                  href="https://www.paypal.com/donate?campaign_id=EP5T3GJRHCAZ4"
+                  href="https://www.paypal.com/pools/c/974YcJNt3Q"
                   target="_blank"
                 >
                   <button className="bg-yellow-500 text-black flex justify-center w-full py-2 font-semibold my-2 px-4 whitespace-nowrap">

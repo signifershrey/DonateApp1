@@ -6,7 +6,7 @@ const Payment = () => {
     <>
       <div className="flex flex-col gap-4 items-center bg-gray-100 p-10 text-center">
         <Link
-          href="https://www.paypal.com/donate?campaign_id=EP5T3GJRHCAZ4"
+          href="https://www.paypal.com/pools/c/974YcJNt3Q"
           target="_blank"
         >
           <button className="flex items-center justify-center md:w-fit bg-white border border-gray-300 rounded-lg shadow-md px-6 py-2 font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">

@@ -7,8 +7,9 @@ const LivePage = () => {
   return (
     <>
       <div className="md:px-28 px-6">
-        <h1 className="font-semibold text-center text-4xl pt-2 pb-6">Our Stories</h1>
-
+        <h1 className="font-semibold text-center text-4xl pt-2 pb-6">
+          Our Stories
+        </h1>
         <div className="pb-10">
           <Image
             src={Banner}
@@ -16,51 +17,54 @@ const LivePage = () => {
             className="lg:w-[100%] h-[28rem]  rounded-lg"
           />
         </div>
-
+        We were able to connecto to this kids, and ask them about their stories.
+        Here are some of the stories we were able to gather:
         <div className="py-2">
-          <h1 className="py-2 font-bold text-lg">Aya’s Journey to Recovery</h1>
-          <p className="py-2">
-            In the midst of the ongoing conflict in Gaza, 7-year-old Aya’s life
-            took a tragic turn when her home was struck, leaving her severely
-            injured. Her family rushed her to a local clinic, where Dr. Ahmad,
-            armed with medical supplies provided by our NGO, stepped in to help.
-            Through a delicate surgery and weeks of intensive care, Aya began to
-            heal. Today, she’s regaining her strength and can walk again, a true
-            testament to the lifesaving power of local healthcare supported by
-            our organization.
+          <h2 className="py-2 font-bold text-lg">Talal’s Journey</h2>
+          <p className="py-2">What do you love to eat?</p>
+          <p>Maftool -Palestinian meal-</p>
+          <p>What song do you like?</p>
+          <p>هالصيصان شو حلوين</p>
+          <p>What do you want to become in future?</p>
+          <p>An enginee</p>
+          <p>What do you like to happen?</p>
+          <p>
+            I would love the war to end, return to our homes, and go to school
+            again
           </p>
         </div>
-
         <div className="py-2">
-          <h1 className="py-2 font-bold text-lg">Omar’s Path to Healing</h1>
-          <p className="py-2">
-            Omar, a 10-year-old boy, was playing outside when he was critically
-            injured by shrapnel from a nearby explosion. His family’s desperate
-            rush to the hospital led them to Dr. Rana, a dedicated local surgeon
-            whose work is supported by our NGO. With the medical tools and
-            training provided through our program, Dr. Rana was able to save
-            Omar’s life. Although his recovery journey is still ongoing, Omar’s
-            resilience shines through, giving his family renewed hope for the
-            future.
+          <h2 className="py-2 font-bold text-lg">Adam’s Path</h2>
+          <p className="py-2">What do you want to become in future?</p>
+          <p>A company manager!</p>
+          <p>What do like to eat?</p>
+          <p>Shawerma</p>
+          <p>Rice and meat</p>
+          <p>(Both are unavailable during the war or too expensive)</p>
+          <p>Do you like listening to songs?</p>
+          <p>Yes, like kids songs, poetry, songs for Palestine.</p>
+          <p>What one thing that will make you happy?</p>
+          <p>
+            The war to come to an end and to see my friends and play soccer with
+            my friends who were killed.
           </p>
         </div>
-
         <div className="py-2">
-          <h1 className="py-2 font-bold text-lg">Sara’s Miracle</h1>
+          <h2 className="py-2 font-bold text-lg">Adam’s Miracle</h2>
           <p className="py-2">
-            Six-year-old Sara was caught in the crossfire during a conflict near
-            her home, suffering severe head trauma. Her chances of survival
-            seemed slim until she arrived at a clinic equipped with tools
-            recently donated by our NGO. Dr. Youssef, a skilled neurosurgeon,
-            performed a delicate operation that saved Sara’s life. Thanks to the
-            continuous care she received, Sara is now on her way to a full
-            recovery, a miracle made possible by the swift actions of local
-            doctors and the crucial support from our organization.
+            One of the children living in the tents is a young boy with Down
+            syndrome. His innocent eyes reflect both the resilience and
+            vulnerability that come with his condition. Despite the hardships he
+            faces every day, his simple wish is to enjoy something many of us
+            take for granted: a small treat. With a gentle smile, he expresses
+            his longing for a few biscuits and a sip of juice—comforts that
+            remind him of the warmth of home, even in the harshest of
+            circumstances.
           </p>
         </div>
       </div>
       <div className="pt-12">
-      <CTASection/>
+        <CTASection />
       </div>
     </>
   );

@@ -50,22 +50,22 @@ const LiveUpdates: React.FC = () => {
           <div className="col-span-1">
             <Card
               image={SocialMediaImg1}
-              title="WSCNF"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+              title="Talal"
+              description="A little kid that only wants to become an engineer."
             />
           </div>
           <div className="col-span-1">
             <Card
               image={SocialMediaImg2}
-              title="Another Campaign"
-              description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+              title="Adam"
+              description="A lillte kid that only wants to become a company manager."
             />
           </div>
           <div className="col-span-1">
             <Card
               image={SocialMediaImg3}
-              title="Impact Story"
-              description="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              title="Adam"
+              description="A lillte kid that has Down syndrome."
             />
           </div>
         </div>

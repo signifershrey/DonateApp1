@@ -86,7 +86,7 @@ export function LoginButton() {
       <ul>
         <li>
           <Link
-            href="https://www.paypal.com/donate?campaign_id=EP5T3GJRHCAZ4"
+            href="https://www.paypal.com/pools/c/974YcJNt3Q"
             className="bg-red-600 text-white px-6 py-3"
             target="_blank"
           >

@@ -63,7 +63,7 @@ const WhatWeDo = () => {
             <button>
               <a
                 className="flex my-2  bg-yellow-500 px-6 py-2 text-black font-semibold"
-                href="https://www.paypal.com/donate?campaign_id=EP5T3GJRHCAZ4"
+                href="https://www.paypal.com/pools/c/974YcJNt3Q"
                 target="_blank"
               >
                 Support Them Now
