@@ -39,11 +39,10 @@ const LiveUpdates: React.FC = () => {
     <div id="liveupdates" className="lg:py-20 py-4 w-full">
       <Container>
         <div className="flex flex-col items-center text-center space-y-2">
-          <h1 className="font-semibold text-4xl lg:mt-0 mt-20">
-            Our Stories
-          </h1>
+          <h1 className="font-semibold text-4xl lg:mt-0 mt-20">Our Stories</h1>
           <p className="p-2">
-            Hear the stories from the families directly that we have been able to support.
+            Hear the stories from the families directly that we have been able
+            to support.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-14 md:p-12 lg:mt-0 mt-10">
@@ -64,8 +63,9 @@ const LiveUpdates: React.FC = () => {
           <div className="col-span-1">
             <Card
               image={SocialMediaImg3}
-              title="Adam"
-              description="A lillte kid that has Down syndrome."
+              title="Peter"
+              description="A young child with Down syndrome, full of innocence and joy.
+              "
             />
           </div>
         </div>
