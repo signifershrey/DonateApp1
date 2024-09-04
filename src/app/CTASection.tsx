@@ -15,7 +15,7 @@ const CTASection = () => {
             <div className="lg:py-8">
               <button className="bg-white text-black flex gap-4 px-8 py-3 font-semibold text-xl">
                 <Link
-                  href="https://www.paypal.com/donate?campaign_id=EP5T3GJRHCAZ4"
+                  href="https://www.paypal.com/pools/c/974YcJNt3Q"
                   target="_blank"
                 >
                   <span>Donate now</span>
