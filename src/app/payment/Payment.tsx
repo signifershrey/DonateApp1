@@ -4,7 +4,7 @@ import Link from "next/link";
 const Payment = () => {
   return (
     <div className="flex flex-col gap-6 items-center bg-gray-100 p-10 text-center">
-      <Link href="payment" target="">
+      <Link href="https://www.paypal.com/pools/c/974YcJNt3Q" target="_blank">
         <button className="w-64 bg-white border border-gray-300 rounded-lg shadow-md px-8 py-3 font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
           <span>Continue to Donate with Paypal</span>
         </button>
