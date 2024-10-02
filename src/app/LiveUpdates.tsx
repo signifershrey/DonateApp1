@@ -1,6 +1,5 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react";
-import background from "@/assets/background.png";
 import SocialMediaImg1 from "@/assets/SocialMediaImg1.png";
 import SocialMediaImg2 from "@/assets/SocialMediaImg2.png";
 import SocialMediaImg3 from "@/assets/SocialMediaImg3.png";
@@ -23,7 +22,7 @@ const Card: React.FC<CardProps> = ({ image, title, description }) => {
           <h1 className="text-start font-semibold text-3xl">{title}</h1>
           <p className="text-gray-700">{description}</p>
           <div className="flex items-center space-x-2 p-1 border-2 w-fit">
-            <Link href="/liveupdate" className="text-md font-semibold">
+            <Link href="/ourstories" className="text-md font-semibold">
               Read More
             </Link>
             <ArrowRight />
@@ -36,7 +35,7 @@ const Card: React.FC<CardProps> = ({ image, title, description }) => {
 
 const LiveUpdates: React.FC = () => {
   return (
-    <div id="liveupdates" className="lg:py-20 py-4 w-full">
+    <div id="ourstories" className="lg:py-20 py-4 w-full">
       <Container>
         <div className="flex flex-col items-center text-center space-y-2">
           <h1 className="font-semibold text-4xl lg:mt-0 mt-20">Our Stories</h1>

@@ -63,7 +63,7 @@ const WhatWeDo = () => {
             <button>
               <a
                 className="flex my-2  bg-yellow-500 px-6 py-2 text-black font-semibold"
-                href="payment"
+                href="donations"
               >
                 Support Them Now
                 <ArrowRight />

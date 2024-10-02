@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation";
 const navlinks = [
   { title: "Our Goals", destination: "#goals" },
   // { title: "Our Progress", destination: "#progress" },
-  { title: "Our Stories", destination: "#liveupdates" },
+  { title: "Our Stories", destination: "#ourstories" },
 ];
 
 function MobileNavExtended() {
@@ -86,7 +86,7 @@ export function LoginButton() {
       <ul>
         <li>
           <Link
-            href="payment"
+            href="donations"
             className="bg-red-600 text-white px-6 py-3"
           >
             Donate

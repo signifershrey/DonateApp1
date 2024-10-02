@@ -45,7 +45,7 @@ const OurProgress = () => {
                 </div>
                 <Image
                   src={donation}
-                  alt="donation"
+                  alt="donationI"
                   width={820}
                   className="hidden lg:block"
                 />

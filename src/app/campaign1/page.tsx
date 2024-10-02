@@ -111,7 +111,7 @@ const Campaignpage = () => {
               </div>
               <div className="my-4  mx-4 ">
                 <Link
-                  href="payment"
+                  href="donations"
                 >
                   <button className="bg-yellow-500 text-black flex justify-center w-full py-2 font-semibold my-2 px-4 whitespace-nowrap">
                     <span className="px-2">Donate Now</span>

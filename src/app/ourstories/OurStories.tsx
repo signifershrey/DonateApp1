@@ -3,7 +3,7 @@ import Banner from "@/assets/Banner.png";
 import Image from "next/image";
 import CTASection from "../CTASection";
 
-const LivePage = () => {
+const OurStories = () => {
   return (
     <>
       <div className="md:px-28 px-6">
@@ -70,4 +70,4 @@ const LivePage = () => {
   );
 };
 
-export default LivePage;
+export default OurStories;

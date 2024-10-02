@@ -1,12 +1,12 @@
 "use client";
-import Payment from "./Payment";
+import Donation from "./Donations";
 import Container from "../container";
 
 export default function page() {
   return (
     <>
       <Container>
-        <Payment />
+        <Donation />
       </Container>
     </>
   );

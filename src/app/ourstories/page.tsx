@@ -1,14 +1,15 @@
 "use client";
 import CTASection from "../CTASection";
-import LivePage from "./LivePage";
+import OurStories from "./OurStories";
 import Container from "../container";
+import TalalStory from "./TalalStory";
 
 export default function page() {
   return (
     <>
       <Container>
-      <LivePage />
-      {/* <CTASection/> */}
+        {/* <OurStories /> */}
+        <TalalStory/>
       </Container>
     </>
   );
