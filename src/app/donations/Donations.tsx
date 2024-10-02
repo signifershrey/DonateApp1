@@ -25,23 +25,23 @@ const Donations = () => {
         </button>
       </Link>
 
-      <Link href="https://www.zellepay.com" target="_blank">
+      <Link href="https://www.sos-usa.org/israel-palestine" target="_blank">
         <button
           onClick={(e) => e.preventDefault()}
           disabled
-          className="w-64 bg-white border border-gray-300 rounded-lg shadow-md px-8 py-3 font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 disabled:opacity-50"
+          className="w-64 bg-white border border-gray-300 rounded-lg shadow-md px-8 py-3 font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 "
         >
-          <span>Continue to Donate with Zelle</span>
+          <span>Continue to Donate with SOS-USA</span>
         </button>
       </Link>
 
-      <Link href="https://www.zeffy.com/donate" target="_blank">
+      <Link href="https://inash.org/" target="_blank">
         <button
           onClick={(e) => e.preventDefault()}
           disabled
-          className="w-64 bg-white border border-gray-300 rounded-lg shadow-md px-8 py-3 font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 disabled:opacity-50"
+          className="w-64 bg-white border border-gray-300 rounded-lg shadow-md px-8 py-3 font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 "
         >
-          <span>Continue to Donate with Zeffy</span>
+          <span>Continue to Donate with Inash</span>
         </button>
       </Link>
     </div>
