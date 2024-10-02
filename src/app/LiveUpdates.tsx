@@ -11,9 +11,10 @@ interface CardProps {
   image: StaticImageData; // or string if using a URL instead of imported images
   title: string;
   description: string;
+  pagelink:string;
 }
 
-const Card: React.FC<CardProps> = ({ image, title, description }) => {
+const Card: React.FC<CardProps> = ({ image, title, description, pagelink }) => {
   return (
     <div className="relative">
       <Image src={image} alt="background" className="md:m-4 rounded-lg" />
@@ -22,7 +23,7 @@ const Card: React.FC<CardProps> = ({ image, title, description }) => {
           <h1 className="text-start font-semibold text-3xl">{title}</h1>
           <p className="text-gray-700">{description}</p>
           <div className="flex items-center space-x-2 p-1 border-2 w-fit">
-            <Link href="/ourstories" className="text-md font-semibold">
+            <Link href={pagelink} className="text-md font-semibold">
               Read More
             </Link>
             <ArrowRight />
@@ -48,23 +49,26 @@ const LiveUpdates: React.FC = () => {
           <div className="col-span-1">
             <Card
               image={SocialMediaImg1}
-              title="Talal"
+              title="Talal's Story"
               description="A little kid that only wants to become an engineer."
+              pagelink="ourstories/talal"
             />
           </div>
           <div className="col-span-1">
             <Card
               image={SocialMediaImg2}
-              title="Adam"
+              title="Adam's Story"
               description="A lillte kid that only wants to become a company manager."
+              pagelink="ourstories/adam"
             />
           </div>
           <div className="col-span-1">
             <Card
               image={SocialMediaImg3}
-              title="Peter"
+              title="Peter's Story"
               description="A young child with Down syndrome, full of innocence and joy.
               "
+              pagelink="ourstories/peter"
             />
           </div>
         </div>
