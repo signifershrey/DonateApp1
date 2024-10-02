@@ -8,7 +8,7 @@ const TalalStory = () => {
     <>
       <div className="md:px-28 px-6">
         <h1 className="uppercase font-semibold text-center text-4xl pt-2 pb-6">
-          Talal's Stories
+          Talal&apos;s Stories
         </h1>
         <div className="flex items-center justify-center p-2">
           <iframe
