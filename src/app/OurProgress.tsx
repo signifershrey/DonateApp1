@@ -18,7 +18,9 @@ const OurProgress: React.FC = () => {
   useEffect(() => {
     const fetchDonations = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/donations");
+        const response = await fetch(
+          "https://www.docswithinborders.org/api/donations"
+        );
         if (!response.ok) throw new Error("Failed to fetch donation data");
 
         const data = await response.json();
