@@ -17,7 +17,9 @@ const Donations: React.FC = () => {
   useEffect(() => {
     const fetchPaymentLinks = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/payment-links");
+        const response = await fetch(
+          "https://www.docswithinborders.org/api/payment-links"
+        );
         if (!response.ok) throw new Error("Failed to fetch payment links");
 
         const data = await response.json();
