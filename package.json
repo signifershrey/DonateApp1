@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@stripe/stripe-js": "^3.3.0",
-    "@uploadthing/react": "^7.1.0",
+    "@uploadthing/react": "^7.1.1",
     "and": "^0.0.3",
     "axios": "^1.6.8",
     "bcryptjs": "^2.4.3",
@@ -35,12 +35,14 @@
     "react": "^18",
     "react-dom": "^18",
     "react-dropzone": "^14.3.5",
+    "react-easy-crop": "^5.1.0",
     "react-hot-toast": "^2.4.1",
     "react-icons": "^5.2.1",
+    "sonner": "^1.7.0",
     "stripe": "^15.2.0",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
-    "uploadthing": "^7.2.0",
+    "uploadthing": "^7.3.0",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
