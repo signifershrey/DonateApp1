@@ -5,19 +5,19 @@ import { useState,useEffect } from "react";
 export default function HomePage() {
   const [children, setChildren] = useState([]);
 
-  useEffect(() => {
-    const fetchChildren = async () => {
-      const response = await fetch("/api/children");
-      const data = await response.json();
-      setChildren(data);
-    };
+  // useEffect(() => {
+  //   const fetchChildren = async () => {
+  //     const response = await fetch("/api/children");
+  //     const data = await response.json();
+  //     setChildren(data);
+  //   };
 
-    fetchChildren();
-  }, []);
+  //   fetchChildren();
+  // }, []);
 
   return (
     <div className="max-w-4xl mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {children.map((child) => (
+      {/* {children.map((child) => (
         <div key={child._id} className="p-4 bg-gray-100 shadow rounded-lg">
           <h2 className="text-xl font-semibold text-gray-800">{child.name}</h2>
           <p className="text-gray-600">{child.bio}</p>
@@ -27,7 +27,8 @@ export default function HomePage() {
             </p>
           </Link>
         </div>
-      ))}
+      ))} */}
+      <p>MORE STORIESS</p>
     </div>
   );
 }

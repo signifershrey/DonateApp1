@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Grid from "gridfs-stream";
+// import Grid from "gridfs-stream";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -15,8 +15,8 @@ export async function connect() {
       console.log("Connected to MongoDB");
 
       // Initialize GridFSStream
-      gfs = Grid(connection.db, mongoose.mongo);
-      gfs.collection("uploads"); // Files will be stored in the "uploads" collection
+      // gfs = Grid(connection.db, mongoose.mongo);
+      // gfs.collection("uploads"); // Files will be stored in the "uploads" collection
     });
   } catch (error) {
     console.log("Something went wrong in connecting to DB");
