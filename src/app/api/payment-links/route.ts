@@ -117,8 +117,7 @@ export async function GET() {
   }
 }
 
-// Handle PUT requests
-export async function PUT(request:any) {
+export async function PATCH(request:any) {
   try {
     const body = await request.json();
 
@@ -130,11 +129,11 @@ export async function PUT(request:any) {
       );
     }
 
-    // Forward the PUT request to the external API
+    // Forward the PATCH request to the external API
     const response = await fetch(
       "https://www.docswithinborders.org/api/payment-links",
       {
-        method: "PUT",
+        method: "PATCH",  // Change from PUT to PATCH
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       }
