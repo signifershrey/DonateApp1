@@ -1,79 +1,24 @@
-// import { NextResponse } from "next/server";
-// import { connect } from "@/dbConfig/dbConfig";
-// import PaymentLinks, { IPaymentLinks } from "@/app/models/PaymentLinks";
-
-// // Connect to MongoDB
-// connect().catch((error) => console.error("Database connection error:", error));
-
-// // GET request handler to retrieve payment links without _id and __v fields
-// export async function GET() {
-//   try {
-//     const paymentLinks: IPaymentLinks | null = await PaymentLinks.findOne(
-//       {},
-//       "-_id -__v"
-//     );
-//     return NextResponse.json(
-//       paymentLinks || {
-//         paypal: "",
-//         gofundme: "",
-//         venmo: "",
-//         sosusa: "",
-//         inash: "",
-//       },
-//       { status: 200 }
-//     );
-//   } catch (error) {
-//     console.error("Error fetching payment links:", error);
-//     return NextResponse.json(
-//       { error: "Failed to fetch payment links" },
-//       { status: 500 }
-//     );
-//   }
-// }
-
-// // PUT request handler to update payment links
-// export async function PUT(req: Request) {
-//   try {
-//     const { paypal, gofundme, venmo, sosusa, inash } =
-//       (await req.json()) as IPaymentLinks;
-//     await PaymentLinks.updateOne(
-//       {},
-//       { paypal, gofundme, venmo, sosusa, inash },
-//       { upsert: true }
-//     );
-//     return NextResponse.json(
-//       { message: "Payment links updated successfully" },
-//       { status: 200 }
-//     );
-//   } catch (error) {
-//     console.error("Error updating payment links:", error);
-//     return NextResponse.json(
-//       { error: "Failed to update payment links" },
-//       { status: 500 }
-//     );
-//   }
-// }
-
+import { connectToDatabase } from "@/lib/mongodb";
+import PaymentLinks from "../../models/PaymentLinks";
 import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
-    const response = await fetch(
-      "https://www.docswithinborders.org/api/payment-links",
-      {
-        headers: { "Content-Type": "application/json" },
-      }
-    );
+    // Connect to the database
+    const { db } = await connectToDatabase();
 
-    if (!response.ok) {
+    // Fetch the first document in the `payment_links` collection
+    const paymentLinks = await db.collection("payment_links").findOne({});
+
+    if (!paymentLinks) {
       return NextResponse.json(
-        { error: `Failed to fetch: ${response.statusText}` },
-        { status: response.status }
+        { error: "No payment links found" },
+        { status: 404 }
       );
     }
 
-    const data = await response.json();
-    return NextResponse.json(data);
+    // Return the payment links as JSON
+    return NextResponse.json(paymentLinks, { status: 200 });
   } catch (error) {
     console.error("Error fetching payment links:", error);
     return NextResponse.json(
@@ -83,77 +28,71 @@ export async function GET() {
   }
 }
 
-// import { NextResponse } from "next/server";
 
-// // Handle GET requests
-// export async function GET() {
-//   try {
-//     const response = await fetch(
-//       "https://www.docswithinborders.org/api/payment-links",
-//       {
-//         headers: { "Content-Type": "application/json" },
-//         redirect: "follow",  // Follow redirects if any
-//       }
-//     );
+export async function PATCH(request) {
+  try {
+    const { db } = await connectToDatabase();
+    const collection = db.collection("payment_links");
 
-//     if (!response.ok) {
-//       return NextResponse.json(
-//         { error: `Failed to fetch: ${response.statusText}` },
-//         { status: response.status }
-//       );
-//     }
+    const body = await request.json();
 
-//     const data = await response.json();
-//     console.log("Links ", data);
-//     return NextResponse.json(data);
-//   } catch (error) {
-//     console.error("Error fetching payment links:", error);
-//     return NextResponse.json(
-//       { error: "An unexpected error occurred" },
-//       { status: 500 }
-//     );
-//   }
-// }
+    // Validate input
+    if (!body || typeof body !== "object") {
+      return NextResponse.json(
+        { error: "Invalid request body. Must be a JSON object." },
+        { status: 400 }
+      );
+    }
 
-// export async function PATCH(request) {
-//   try {
-//     const body = await request.json();
+    // Ensure at least one document exists
+    const existingDocument = await collection.findOne({});
+    if (!existingDocument) {
+      await collection.insertOne({
+        gofundme: "",
+        inash: "",
+        paypal: "",
+        sosusa: "",
+        venmo: "",
+      });
+    }
 
-//     // Validate the input
-//     if (!body || typeof body !== "object") {
-//       return NextResponse.json(
-//         { error: "Invalid request body" },
-//         { status: 400 }
-//       );
-//     }
+    // Prepare fields for update
+    const updateFields = {};
+    for (const key in body) {
+      if (body[key] !== undefined) {
+        updateFields[key] = body[key];
+      }
+    }
 
-//     // Forward the PATCH request to the external API
-//     const response = await fetch(
-//       "https://www.docswithinborders.org/api/payment-links",
-//       {
-//         method: "PATCH",  // Change from PUT to PATCH
-//         headers: { "Content-Type": "application/json" },
-//         body: JSON.stringify(body),
-//         redirect: "follow",  // Follow redirects if any
-//       }
-//     );
+    if (Object.keys(updateFields).length === 0) {
+      return NextResponse.json(
+        { error: "No valid fields provided for update." },
+        { status: 400 }
+      );
+    }
 
-//     if (!response.ok) {
-//       const errorText = await response.text();
-//       return NextResponse.json(
-//         { error: `Failed to update: ${errorText}` },
-//         { status: response.status }
-//       );
-//     }
+    // Update the first document
+    const result = await collection.updateOne(
+      { _id: existingDocument._id }, // Match by unique `_id`
+      { $set: updateFields }
+    );
 
-//     const updatedData = await response.json();
-//     console.log("Updated Links: ", updatedData);
-//     return NextResponse.json(updatedData);
-//   } catch (error) {
-//     console.error("Error updating payment links:", error);
-//     return NextResponse.json(
-//       { error: "An unexpected error occurred" },
-//       { status: 500 }
-//     );
-//   }
-// }
+    if (result.modifiedCount === 0) {
+      return NextResponse.json(
+        { error: "No documents were updated." },
+        { status: 404 }
+      );
+    }
+
+    // Return success
+    return NextResponse.json({
+      message: "Payment links updated successfully.",
+    });
+  } catch (error) {
+    console.error("Error updating payment links:", error);
+    return NextResponse.json(
+      { error: "An unexpected error occurred." },
+      { status: 500 }
+    );
+  }
+}

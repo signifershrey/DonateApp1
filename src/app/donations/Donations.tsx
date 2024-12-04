@@ -23,6 +23,8 @@ const Donations: React.FC = () => {
         if (!response.ok) throw new Error("Failed to fetch payment links");
 
         const data = await response.json();
+        console.log("DA" ,data);
+        
         setLinks({
           paypal: data.paypal || "",
           gofundme: data.gofundme || "",
