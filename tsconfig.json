@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/dashboard/addStory/page.js", "src/app/morestories/page.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/dashboard/addStory/page.js", "src/app/morestories/page.js", "src/app/api/payment-links/route.js"],
   "exclude": ["node_modules"]
 }
