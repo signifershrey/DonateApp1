@@ -54,8 +54,41 @@
 //   }
 // }
 
+// import { NextResponse } from "next/server";
+
+// export async function GET() {
+//   try {
+//     const response = await fetch(
+//       "https://www.docswithinborders.org/api/payment-links",
+//       {
+//         headers: { "Content-Type": "application/json" },
+//       }
+//     );
+
+//     if (!response.ok) {
+//       return NextResponse.json(
+//         { error: `Failed to fetch: ${response.statusText}` },
+//         { status: response.status }
+//       );
+//     }
+
+//     const data = await response.json();
+//     console.log("Links ", data);
+//     return NextResponse.json(data);
+//   } catch (error) {
+//     console.error("Error fetching payment links:", error);
+//     return NextResponse.json(
+//       { error: "An unexpected error occurred" },
+//       { status: 500 }
+//     );
+//   }
+// }
+
+
+
 import { NextResponse } from "next/server";
 
+// Handle GET requests
 export async function GET() {
   try {
     const response = await fetch(
@@ -73,9 +106,53 @@ export async function GET() {
     }
 
     const data = await response.json();
+    console.log("Links ", data);
     return NextResponse.json(data);
   } catch (error) {
     console.error("Error fetching payment links:", error);
+    return NextResponse.json(
+      { error: "An unexpected error occurred" },
+      { status: 500 }
+    );
+  }
+}
+
+// Handle PUT requests
+export async function PUT(request:any) {
+  try {
+    const body = await request.json();
+
+    // Validate the input
+    if (!body || typeof body !== "object") {
+      return NextResponse.json(
+        { error: "Invalid request body" },
+        { status: 400 }
+      );
+    }
+
+    // Forward the PUT request to the external API
+    const response = await fetch(
+      "https://www.docswithinborders.org/api/payment-links",
+      {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      }
+    );
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      return NextResponse.json(
+        { error: `Failed to update: ${errorText}` },
+        { status: response.status }
+      );
+    }
+
+    const updatedData = await response.json();
+    console.log("Updated Links: ", updatedData);
+    return NextResponse.json(updatedData);
+  } catch (error) {
+    console.error("Error updating payment links:", error);
     return NextResponse.json(
       { error: "An unexpected error occurred" },
       { status: 500 }
