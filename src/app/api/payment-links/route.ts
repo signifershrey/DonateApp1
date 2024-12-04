@@ -84,8 +84,6 @@
 //   }
 // }
 
-
-
 import { NextResponse } from "next/server";
 
 // Handle GET requests
@@ -95,6 +93,7 @@ export async function GET() {
       "https://www.docswithinborders.org/api/payment-links",
       {
         headers: { "Content-Type": "application/json" },
+        redirect: "follow",  // Follow redirects if any
       }
     );
 
@@ -117,7 +116,7 @@ export async function GET() {
   }
 }
 
-export async function PATCH(request:any) {
+export async function PATCH(request) {
   try {
     const body = await request.json();
 
@@ -136,6 +135,7 @@ export async function PATCH(request:any) {
         method: "PATCH",  // Change from PUT to PATCH
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
+        redirect: "follow",  // Follow redirects if any
       }
     );
 
