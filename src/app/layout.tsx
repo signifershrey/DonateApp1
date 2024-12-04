@@ -3,6 +3,7 @@ import  {Arimo}  from "next/font/google";
 import "./globals.css";
 import Navbar from "./navbar";
 import Footer from "./footer";
+import { Toaster } from "sonner";
 
 const arimo = Arimo({ subsets: ["latin"]});
 
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">     
       <body className={arimo.className}>
+      <Toaster position="top-center" richColors closeButton />
       <Navbar />
         {children}</body>
       <Footer />

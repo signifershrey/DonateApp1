@@ -15,30 +15,29 @@ const OurProgress: React.FC = () => {
   const [donationData, setDonationData] = useState<DonationData | null>(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchDonations = async () => {
-      try {
-        const response = await fetch(
-          "https://www.docswithinborders.org/api/donations"
-        );
-        if (!response.ok) throw new Error("Failed to fetch donation data");
+useEffect(() => {
+  const fetchDonations = async () => {
+    try {
+      const response = await fetch("/api/proxydonation");
+      if (!response.ok) throw new Error("Failed to fetch donation data");
+      const data = await response.json();
+      console.log("Fetched donation data:", data); // Log data here
+      setDonationData({
+        totalDonations: data.totalDonations || "$0",
+        paypalDonations: data.paypalDonations || "$0",
+        zelleDonations: data.zelleDonations || "$0",
+        venmoDonations: data.venmoDonations || "$0",
+      });
+    } catch (error) {
+      console.error("Error fetching donation data:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-        const data = await response.json();
-        setDonationData({
-          totalDonations: data.totalDonations || "$0",
-          paypalDonations: data.paypalDonations || "$0",
-          zelleDonations: data.zelleDonations || "$0",
-          venmoDonations: data.venmoDonations || "$0",
-        });
-      } catch (error) {
-        console.error("Error fetching donation data:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  fetchDonations();
+}, []);
 
-    fetchDonations();
-  }, []);
 
   return (
     <div className="bg-gray-100">
