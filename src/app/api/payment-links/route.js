@@ -73,7 +73,6 @@ export async function GET() {
     }
 
     const data = await response.json();
-    console.log("Links ", data);
     return NextResponse.json(data);
   } catch (error) {
     console.error("Error fetching payment links:", error);
