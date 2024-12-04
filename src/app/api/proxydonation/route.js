@@ -1,37 +1,11 @@
-// import { NextResponse } from "next/server";
+// src/app/api/proxydonation/route.js
 
-// export async function GET() {
-//   try {
-//     const response = await fetch(
-//       "https://www.docswithinborders.org/api/donations",
-//       {
-//         headers: { "Content-Type": "application/json" },
-//       }
-//     );
-
-//     if (!response.ok) {
-//       return NextResponse.json(
-//         { error: `Failed to fetch: ${response.statusText}` },
-//         { status: response.status }
-//       );
-//     }
-
-//     const data = await response.json();
-//      console.log("Donations ", data);
-//     return NextResponse.json(data);
-//   } catch (error) {
-//     console.error("Error fetching donations:", error);
-//     return NextResponse.json(
-//       { error: "An unexpected error occurred" },
-//       { status: 500 }
-//     );
-//   }
-// }
 import { NextResponse } from "next/server";
 
-export async function handler(req) {
-  const apiUrl = "https://www.docswithinborders.org/api/donations";
+const apiUrl = "https://www.docswithinborders.org/api/donations";
 
+// Handler for all HTTP methods (GET, POST, PUT, DELETE)
+async function proxyDonationRequest(req) {
   try {
     // Forward the request to the external API with the same method, headers, and body (if applicable)
     const response = await fetch(apiUrl, {
@@ -64,7 +38,19 @@ export async function handler(req) {
   }
 }
 
-export const GET = handler;
-export const POST = handler;
-export const PUT = handler;
-export const DELETE = handler;
+// Named exports for each method
+export async function GET(req) {
+  return proxyDonationRequest(req);
+}
+
+export async function POST(req) {
+  return proxyDonationRequest(req);
+}
+
+export async function PUT(req) {
+  return proxyDonationRequest(req);
+}
+
+export async function DELETE(req) {
+  return proxyDonationRequest(req);
+}
