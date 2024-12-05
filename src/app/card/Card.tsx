@@ -1,8 +1,17 @@
+// src/app/card/Card.tsx
 "use client";
 import Image from "next/image";
 import Link from "next/link";
 
-const Card = ({ imageUrl, name, bio, ebookLink }) => {
+// Define prop types for the Card component
+interface CardProps {
+  imageUrl: string;
+  name: string;
+  bio: string;
+  ebookLink: string;
+}
+
+export function Card({ imageUrl, name, bio, ebookLink }: CardProps) {
   return (
     <div className="relative md:p-6 p-4 m-4 flex flex-col items-center border rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out bg-gradient-to-br from-white via-gray-100 to-gray-50">
       {/* Image Wrapper */}
@@ -30,7 +39,7 @@ const Card = ({ imageUrl, name, bio, ebookLink }) => {
         <div className="flex justify-center">
           <Link
             href={ebookLink}
-            className="inline-block px-6 py-3 bg-[#e9b308]  text-black font-semibold text-lg rounded-lg shadow-md transition-all duration-300 transform hover:scale-105"
+            className="inline-block px-6 py-3 bg-[#e9b308] text-black font-semibold text-lg rounded-lg shadow-md transition-all duration-300 transform hover:scale-105"
           >
             Read Ebook
           </Link>
@@ -38,6 +47,4 @@ const Card = ({ imageUrl, name, bio, ebookLink }) => {
       </div>
     </div>
   );
-};
-
-export default Card;
+}
