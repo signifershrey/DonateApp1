@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  reactStrictMode: true,
+  images: {
+    domains: ['utfs.io'], // Add 'utfs.io' to the allowed domains
+  },
+};
 
-export default nextConfig;
+export  default  nextConfig;

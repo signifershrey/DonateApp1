@@ -16,21 +16,24 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ image, title, description, pagelink }) => {
   return (
-    <div className="relative">
-      <Image src={image} alt="background" className="md:m-4 rounded-lg" />
-      <div className="bg-white absolute bottom-0 left-0 p-4 border-2 transform md:translate-y-10 md:translate-x-10">
-        <div className="flex flex-col space-y-4 text-black">
-          <h1 className="text-start font-semibold text-3xl">{title}</h1>
-          <p className="text-gray-700">{description}</p>
-          <div className="flex items-center space-x-2 p-1 border-2 w-fit">
-            <Link href={pagelink} className="text-md font-semibold">
-              Read More
-            </Link>
-            <ArrowRight />
+    <>
+      <div className="relative">
+        <Image src={image} alt="background" className="md:m-4 rounded-lg" />
+        <div className="bg-white absolute bottom-0 left-0 p-4 border-2 transform md:translate-y-10 md:translate-x-10">
+          <div className="flex flex-col space-y-4 text-black">
+            <h1 className="text-start font-semibold text-3xl">{title}</h1>
+            <p className="text-gray-700">{description}</p>
+            <div className="flex items-center space-x-2 p-1 border-2 w-fit">
+              <Link href={pagelink} className="text-md font-semibold">
+                Read More
+              </Link>
+              <ArrowRight />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+     
+    </>
   );
 };
 
@@ -73,6 +76,16 @@ const LiveUpdates: React.FC = () => {
           </div>
         </div>
       </Container>
+      {/* <div className="bg-[#e9b308] flex font-semibold justify-center items-center  text-center space-x-2 p-2.5 border-4 w-fit mx-auto mt-4">
+        <button>Read More Stories</button>
+      </div> */}
+      <div className="bg-[#e9b308] flex font-semibold justify-center items-center text-center space-x-2 p-2.5 border-2 w-fit mx-auto mt-4">
+        <Link href="/morestories">
+          <button className="px-4 py-2 bg-white rounded-md hover:bg-gray-200 transition">
+            Read More Stories
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

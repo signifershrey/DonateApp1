@@ -27,7 +27,7 @@ async function proxyDonationRequest(req) {
     }
 
     const data = await response.json();
-    console.log("Donations ", data);
+    // console.log("Donations ", data);
     return NextResponse.json(data);
   } catch (error) {
     console.error("Error fetching donations:", error.message);
